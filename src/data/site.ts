@@ -1,0 +1,3 @@
+export const site={name:'CDA Los Andes',city:'Ipiales, Nariño',address:'Dirección por confirmar',phone:'+57 601 555 0123',phoneHref:'+576015550123',whatsapp:'573005550123',email:'contacto@cdalosandes.com.co',maps:'https://maps.google.com/?q=Ipiales+Nariño+Colombia'};
+export const wa=(message='Hola, quiero información sobre la revisión técnico-mecánica.')=>`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+export const services=[['01','Vehículos livianos','Revisión técnico-mecánica y de emisiones para automóviles, camperos y camionetas.'],['02','Motocicletas','Línea de inspección especializada con un proceso técnico claro y eficiente.'],['03','Emisiones','Evaluación de gases y emisiones dentro del proceso reglamentario aplicable.']];

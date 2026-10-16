@@ -1,0 +1,4 @@
+---
+import {services} from '@/data/site';
+---
+<div class="grid3 reveal">{services.map(([number,title,text])=><article class="card"><span class="card__no">{number}</span><h3>{title}</h3><p>{text}</p><span class="card__arrow">↗</span></article>)}</div>
