@@ -1,5 +1,327 @@
 ---
-import Base from '@/layouts/Base.astro';import ServiceGrid from '@/components/ServiceGrid.astro';import {site,wa} from '@/data/site';
+import Base from "@/layouts/Base.astro";
+import ServiceGrid from "@/components/ServiceGrid.astro";
+import { site, wa } from "@/data/site";
 ---
-<Base title="CDA Los Andes | Revisión técnico-mecánica en Ipiales" description="Revisión técnico-mecánica y de emisiones contaminantes en Ipiales."><section class="hero"><img src="/images/hero-inicio.webp" alt="Centro de diagnóstico automotor" /><div class="hero__shade"></div><div class="container hero__content"><p class="hero__kicker">Centro de diagnóstico automotor · Ipiales</p><h1>Seguridad para tu vehículo,<br/><em>confianza</em> para tu camino</h1><p>Revisión técnico-mecánica y de emisiones con precisión, tecnología y atención responsable.</p><div class="hero__actions"><a class="btn primary" href={wa()} target="_blank">Agendar revisión <span>↗</span></a><a class="btn ghost" href="#servicios">Explorar servicios</a></div></div><a class="scroll" href="#servicios"><span>Descubre más</span><i></i></a></section><section class="statement section"><div class="container reveal"><p class="kicker">Nuestra filosofía</p><h2>Más que una revisión:<br/>un compromiso con la <strong>seguridad vial</strong></h2></div></section><section class="section section-soft" id="servicios"><div class="container"><div class="split reveal"><div><p class="kicker">Servicios</p><h2 class="display">Precisión técnica en cada inspección</h2></div><p class="lead">Procesos diseñados para verificar las condiciones de seguridad y emisiones de tu vehículo con claridad y eficiencia.</p></div><ServiceGrid/></div></section><section class="feature section-dark"><img src="/images/hero-servicios.webp" alt="Línea de inspección vehicular"/><div class="feature__shade"></div><div class="container feature__content reveal"><p class="kicker">Proceso confiable</p><h2 class="display">Tecnología al servicio de tu seguridad</h2><p class="lead">Equipos modernos, proceso técnico y atención orientada a que tengas información clara antes, durante y después de tu revisión.</p><a class="btn ghost" href="/servicios/">Conoce el proceso ↗</a></div></section><section class="section section-soft"><div class="container"><div class="split reveal"><div><p class="kicker">Tarifas</p><h2 class="display">Información clara, sin sorpresas</h2></div><a class="text-link" href="/tarifas/">Consultar todas las tarifas ↗</a></div><div class="price-grid reveal"><article><span>Motocicletas</span><strong>$220.000</strong><small>Valor provisional</small></article><article><span>Vehículos livianos</span><strong>$320.000</strong><small>Valor provisional</small></article><article><span>Vehículos eléctricos</span><strong>$240.000</strong><small>Valor provisional</small></article></div></div></section><section class="section section-dark"><div class="container location reveal"><div><p class="kicker">Ubicación</p><h2 class="display">Estamos en Ipiales</h2><p class="lead">El mapa está centrado temporalmente en la ciudad. La dirección definitiva se actualizará cuando sea confirmada.</p><a class="btn primary" href={site.maps} target="_blank">Abrir Google Maps ↗</a></div><div class="map"><iframe title="Mapa de Ipiales" src="https://www.google.com/maps?q=Ipiales%2C%20Nari%C3%B1o%2C%20Colombia&z=14&output=embed" loading="lazy" allowfullscreen></iframe></div></div></section></Base>
-<style>.hero{position:relative;display:grid;min-height:calc(100vh - 178px);align-items:center;overflow:hidden;color:#fff;background:#03152d}.hero>img,.hero__shade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero>img{animation:zoom 14s ease-out both}.hero__shade{background:linear-gradient(90deg,rgba(1,10,23,.96),rgba(3,21,45,.8) 49%,rgba(3,21,45,.18))}.hero__content{position:relative;z-index:1;padding:80px 0 120px}.hero__kicker{font-family:var(--display);font-weight:700;letter-spacing:.15em;text-transform:uppercase}.hero h1{max-width:1040px;margin:26px 0;font-family:var(--display);font-size:clamp(3.6rem,6.1vw,7rem);font-weight:600;line-height:.9;letter-spacing:-.03em;text-transform:uppercase}.hero h1 em{color:var(--green2);font-style:normal}.hero__content>p:not(.hero__kicker){max-width:650px;color:#e1eaf3;font-size:1.08rem}.hero__actions{display:flex;gap:12px;margin-top:34px}.scroll{position:absolute;z-index:2;right:32px;bottom:26px;display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;transform:rotate(90deg);transform-origin:right bottom}.scroll i{width:48px;height:1px;background:#fff}.statement{background:#fff}.statement h2{max-width:1050px;margin:0;color:var(--navy);font-family:var(--display);font-size:clamp(2.7rem,4.8vw,5.2rem);font-weight:500;line-height:1;text-transform:uppercase}.statement strong{color:var(--green);font-weight:600}.split{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:48px}.split .lead{max-width:470px}.feature{position:relative;isolation:isolate;min-height:720px;display:grid;align-items:end;overflow:hidden}.feature>img,.feature__shade{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover}.feature__shade{z-index:-1;background:linear-gradient(90deg,rgba(1,10,23,.95),rgba(3,21,45,.66),rgba(3,21,45,.1))}.feature__content{padding-bottom:20px}.feature .lead{margin-bottom:30px}.text-link{padding-bottom:8px;border-bottom:2px solid var(--green);font-family:var(--display);font-weight:700;letter-spacing:.06em;text-transform:uppercase}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.price-grid article{padding:34px;border-right:1px solid var(--line)}.price-grid article:last-child{border:0}.price-grid span,.price-grid small{display:block;color:var(--muted)}.price-grid strong{display:block;margin:28px 0 8px;color:var(--navy);font-family:var(--display);font-size:3.2rem}.location{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:70px}.location .btn{margin-top:30px}@keyframes zoom{from{transform:scale(1.05)}to{transform:scale(1)}}@media(max-width:900px){.hero{min-height:680px}.split,.location{grid-template-columns:1fr;display:grid}.price-grid{grid-template-columns:1fr}.price-grid article{border-right:0;border-bottom:1px solid var(--line)}.feature{min-height:600px}}@media(max-width:560px){.hero__actions{flex-direction:column}.scroll{display:none}.hero h1{font-size:3.35rem}}</style>
+
+<Base
+  title="CDA Los Andes | Revisión técnico-mecánica en Ipiales"
+  description="Revisión técnico-mecánica y de emisiones contaminantes en Ipiales."
+  ><section class="hero">
+    <img
+      src="/images/hero-inicio.webp"
+      alt="Centro de diagnóstico automotor"
+    /><div class="hero__shade"></div><div class="container hero__content">
+      <p class="hero__kicker">Centro de diagnóstico automotor · Ipiales</p><h1>
+        Seguridad para tu vehículo,<br /><em>confianza</em> para tu camino
+      </h1><p>
+        Revisión técnico-mecánica y de emisiones con precisión, tecnología y
+        atención responsable.
+      </p><div class="hero__actions">
+        <a class="btn primary" href={wa()} target="_blank"
+          >Agendar revisión <span>↗</span></a
+        ><a class="btn ghost" href="#servicios">Explorar servicios</a>
+      </div>
+    </div><a class="scroll" href="#servicios"
+      ><span>Descubre más</span><i></i></a>
+  </section><section class="statement section">
+    <div class="container reveal">
+      <p class="kicker">Nuestra filosofía</p><h2>
+        Más que una revisión:<br />un compromiso con la <strong
+          >seguridad vial</strong>
+      </h2>
+    </div>
+  </section><section class="section section-soft" id="servicios">
+    <div class="container">
+      <div class="split reveal">
+        <div>
+          <p class="kicker">Servicios</p><h2 class="display">
+            Precisión técnica en cada inspección
+          </h2>
+        </div><p class="lead">
+          Procesos diseñados para verificar las condiciones de seguridad y
+          emisiones de tu vehículo con claridad y eficiencia.
+        </p>
+      </div><ServiceGrid />
+    </div>
+  </section><section class="feature section-dark">
+    <img
+      src="/images/hero-servicios.webp"
+      alt="Línea de inspección vehicular"
+    /><div class="feature__shade"></div><div
+      class="container feature__content reveal"
+    >
+      <p class="kicker">Proceso confiable</p><h2 class="display">
+        Tecnología al servicio de tu seguridad
+      </h2><p class="lead">
+        Equipos modernos, proceso técnico y atención orientada a que tengas
+        información clara antes, durante y después de tu revisión.
+      </p><a class="btn ghost" href="/servicios/">Conoce el proceso ↗</a>
+    </div>
+  </section><section class="section section-soft">
+    <div class="container">
+      <div class="split reveal">
+        <div>
+          <p class="kicker">Tarifas</p><h2 class="display">
+            Información clara, sin sorpresas
+          </h2>
+        </div><a class="text-link" href="/tarifas/"
+          >Consultar todas las tarifas ↗</a>
+      </div><div class="price-grid reveal">
+        <article>
+          <span>Motocicletas</span><strong>$220.000</strong><small
+            >Valor provisional</small>
+        </article><article>
+          <span>Vehículos livianos</span><strong>$320.000</strong><small
+            >Valor provisional</small>
+        </article><article>
+          <span>Vehículos eléctricos</span><strong>$240.000</strong><small
+            >Valor provisional</small>
+        </article>
+      </div>
+    </div>
+  </section><section class="section section-dark">
+    <div class="container location reveal">
+      <div>
+        <p class="kicker">Ubicación</p><h2 class="display">
+          Estamos en Ipiales
+        </h2><p class="lead">
+          El mapa está centrado temporalmente en la ciudad. La dirección
+          definitiva se actualizará cuando sea confirmada.
+        </p><a class="btn primary" href={site.maps} target="_blank"
+          >Abrir Google Maps ↗</a>
+      </div><div class="map">
+        <iframe
+          title="Mapa de Ipiales"
+          src="https://www.google.com/maps?q=Ipiales%2C%20Nari%C3%B1o%2C%20Colombia&z=14&output=embed"
+          loading="lazy"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section></Base
+>
+<style>
+  .hero {
+    position: relative;
+    display: grid;
+    min-height: calc(100vh - 178px);
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    background: #03152d;
+  }
+  .hero > img,
+  .hero__shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero > img {
+    animation: zoom 14s ease-out both;
+  }
+  .hero__shade {
+    background: linear-gradient(
+      90deg,
+      rgba(1, 10, 23, 0.96),
+      rgba(3, 21, 45, 0.8) 49%,
+      rgba(3, 21, 45, 0.18)
+    );
+  }
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0 120px;
+  }
+  .hero__kicker {
+    font-family: var(--display);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    max-width: 1040px;
+    margin: 26px 0;
+    font-family: var(--display);
+    font-size: clamp(3.6rem, 6.1vw, 7rem);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+  .hero h1 em {
+    color: var(--green2);
+    font-style: normal;
+  }
+  .hero__content > p:not(.hero__kicker) {
+    max-width: 650px;
+    color: #e1eaf3;
+    font-size: 1.08rem;
+  }
+  .hero__actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 34px;
+  }
+  .scroll {
+    position: absolute;
+    z-index: 2;
+    right: 32px;
+    bottom: 26px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--display);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+  }
+  .scroll i {
+    width: 48px;
+    height: 1px;
+    background: #fff;
+  }
+  .statement {
+    background: #fff;
+  }
+  .statement h2 {
+    max-width: 1050px;
+    margin: 0;
+    color: var(--navy);
+    font-family: var(--display);
+    font-size: clamp(2.7rem, 4.8vw, 5.2rem);
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .statement strong {
+    color: var(--green);
+    font-weight: 600;
+  }
+  .split {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 48px;
+  }
+  .split .lead {
+    max-width: 470px;
+  }
+  .feature {
+    position: relative;
+    isolation: isolate;
+    min-height: 720px;
+    display: grid;
+    align-items: end;
+    overflow: hidden;
+  }
+  .feature > img,
+  .feature__shade {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .feature__shade {
+    z-index: -1;
+    background: linear-gradient(
+      90deg,
+      rgba(1, 10, 23, 0.95),
+      rgba(3, 21, 45, 0.66),
+      rgba(3, 21, 45, 0.1)
+    );
+  }
+  .feature__content {
+    padding-bottom: 20px;
+  }
+  .feature .lead {
+    margin-bottom: 30px;
+  }
+  .text-link {
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--green);
+    font-family: var(--display);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .price-grid article {
+    padding: 34px;
+    border-right: 1px solid var(--line);
+  }
+  .price-grid article:last-child {
+    border: 0;
+  }
+  .price-grid span,
+  .price-grid small {
+    display: block;
+    color: var(--muted);
+  }
+  .price-grid strong {
+    display: block;
+    margin: 28px 0 8px;
+    color: var(--navy);
+    font-family: var(--display);
+    font-size: 3.2rem;
+  }
+  .location {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 70px;
+  }
+  .location .btn {
+    margin-top: 30px;
+  }
+  @keyframes zoom {
+    from {
+      transform: scale(1.05);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @media (max-width: 900px) {
+    .hero {
+      min-height: 680px;
+    }
+    .split,
+    .location {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+    .price-grid {
+      grid-template-columns: 1fr;
+    }
+    .price-grid article {
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .feature {
+      min-height: 600px;
+    }
+  }
+  @media (max-width: 560px) {
+    .hero__actions {
+      flex-direction: column;
+    }
+    .scroll {
+      display: none;
+    }
+    .hero h1 {
+      font-size: 3.35rem;
+    }
+  }
+</style>
