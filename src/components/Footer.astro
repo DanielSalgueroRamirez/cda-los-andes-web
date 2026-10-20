@@ -1,4 +1,80 @@
 ---
-import {site} from '@/data/site';
+import { site } from "@/data/site";
 ---
-<footer><div class="container foot"><div class="identity"><img src="/images/logo-principal-cda-los-andes.png" alt="CDA Los Andes"/><p>Seguridad. Ambiente. Confianza.</p></div><div><b>Navegación</b><a href="/servicios/">Servicios</a><a href="/tarifas/">Tarifas</a><a href="/sedes/">Ubicación</a></div><div><b>Contacto</b><a href={`tel:${site.phoneHref}`}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a><span>{site.city}</span></div></div><div class="container legal"><span>© {new Date().getFullYear()} CDA Los Andes</span><span>Sitio provisional</span></div></footer><style>footer{padding:72px 0 26px;color:#b8c8d8;background:#020d1c}.foot{display:grid;grid-template-columns:1.4fr .7fr 1fr;gap:50px}.identity img{width:240px;max-height:100px;object-fit:contain;mix-blend-mode:screen}.identity p{font-family:var(--display);letter-spacing:.12em;text-transform:uppercase}.foot b{display:block;margin-bottom:18px;color:#fff;font-family:var(--display);letter-spacing:.08em;text-transform:uppercase}.foot a,.foot span{display:block;margin:8px 0}.legal{display:flex;justify-content:space-between;margin-top:52px;padding-top:22px;border-top:1px solid #ffffff18;font-size:.78rem}@media(max-width:720px){.foot{grid-template-columns:1fr}.legal{gap:8px;flex-direction:column}}</style>
+
+<footer>
+  <div class="container foot">
+    <div class="identity">
+      <img
+        src="/images/logo-principal-cda-los-andes.png"
+        alt="CDA Los Andes"
+      /><p>Seguridad. Ambiente. Confianza.</p>
+    </div><div>
+      <b>Navegación</b><a href="/servicios/">Servicios</a><a href="/tarifas/"
+        >Tarifas</a
+      ><a href="/sedes/">Ubicación</a>
+    </div><div>
+      <b>Contacto</b><a href={`tel:${site.phoneHref}`}>{site.phone}</a><a
+        href={`mailto:${site.email}`}>{site.email}</a
+      ><span>{site.city}</span>
+    </div>
+  </div><div class="container legal">
+    <span>© {new Date().getFullYear()} CDA Los Andes</span><span
+      >Sitio provisional</span>
+  </div>
+</footer><style>
+  footer {
+    padding: 72px 0 26px;
+    color: #b8c8d8;
+    background: #020d1c;
+  }
+  .foot {
+    display: grid;
+    grid-template-columns: 1.4fr 0.7fr 1fr;
+    gap: 50px;
+  }
+  .identity img {
+    width: 240px;
+    max-height: 100px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+
+    transform: scaleX(2);
+    transform-origin: center;
+  }
+  .identity p {
+    font-family: var(--display);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .foot b {
+    display: block;
+    margin-bottom: 18px;
+    color: #fff;
+    font-family: var(--display);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .foot a,
+  .foot span {
+    display: block;
+    margin: 8px 0;
+  }
+  .legal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+    padding-top: 22px;
+    border-top: 1px solid #ffffff18;
+    font-size: 0.78rem;
+  }
+  @media (max-width: 720px) {
+    .foot {
+      grid-template-columns: 1fr;
+    }
+    .legal {
+      gap: 8px;
+      flex-direction: column;
+    }
+  }
+</style>
