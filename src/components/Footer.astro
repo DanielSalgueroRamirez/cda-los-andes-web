@@ -5,10 +5,7 @@ import { site } from "@/data/site";
 <footer>
   <div class="container foot">
     <div class="identity">
-      <img
-        src="/images/logo-principal-cda-los-andes.png"
-        alt="CDA Los Andes"
-      />
+      <img src="/images/logo-principal-cda-los-andes.png" alt="CDA Los Andes" />
 
       <p>Seguridad. Ambiente. Confianza.</p>
     </div>
@@ -65,13 +62,19 @@ import { site } from "@/data/site";
     gap: 50px;
   }
 
+  .identity {
+    min-width: 0;
+  }
+
   .identity img {
-    width: 240px;
-    max-height: 100px;
+    display: block;
+    width: 100%;
+    max-width: 310px;
+    height: 110px;
     object-fit: contain;
+    object-position: left center;
     mix-blend-mode: screen;
-    transform: scaleX(2);
-    transform-origin: center;
+    transform: none;
   }
 
   .identity p {
@@ -129,23 +132,31 @@ import { site } from "@/data/site";
 
   @media (max-width: 720px) {
     .foot {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 36px;
+    }
+
+    .identity {
+      width: 100%;
+      min-width: 0;
     }
 
     .identity img {
-      transform-origin: left center;
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      max-height: 110px;
+      margin: 0;
+      object-fit: contain;
+      object-position: left center;
+      transform: none;
     }
 
-    /*
-     * En celular se oculta el texto normal y se habilita
-     * el enlace para realizar la llamada.
-     */
-    .phone-desktop {
-      display: none !important;
-    }
-
-    .phone-mobile {
-      display: block !important;
+    .identity p {
+      max-width: 100%;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
     }
 
     .legal {
