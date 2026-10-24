@@ -1,4 +1,51 @@
 ---
-import Base from '@/layouts/Base.astro';import {site} from '@/data/site';
+import Base from "@/layouts/Base.astro";
+import { site } from "@/data/site";
 ---
-<Base title="Sede en Ipiales | CDA Los Andes" description="Ubicación de CDA Los Andes en Ipiales."><section class="pageHero" style="background-image:url('/images/hero-sede.webp')"><div class="container"><p class="kicker">Nuestra ubicación</p><h1>Sede en Ipiales</h1><p>Consulta el mapa y nuestros canales de atención antes de desplazarte.</p></div></section><section class="section section-dark"><div class="container location reveal"><div><p class="kicker">Ipiales, Nariño</p><h2 class="display">Encuéntranos en Ipiales</h2><p class="lead">La dirección exacta está pendiente de confirmación. Por ahora, el mapa muestra la ciudad de Ipiales.</p><a class="btn primary" href={site.maps} target="_blank">Abrir Google Maps ↗</a></div><div class="map"><iframe title="Mapa de Ipiales" src="https://www.google.com/maps?q=Ipiales%2C%20Nari%C3%B1o%2C%20Colombia&z=14&output=embed" loading="lazy" allowfullscreen></iframe></div></div></section><style>.location{display:grid;grid-template-columns:.75fr 1.25fr;align-items:center;gap:70px}.location .btn{margin-top:30px}@media(max-width:850px){.location{grid-template-columns:1fr}}</style></Base>
+
+<Base
+  title="Sede en Ipiales | CDA Los Andes"
+  description="Ubicación de CDA Los Andes en Ipiales."
+  ><section
+    class="pageHero"
+    style="background-image:url('/images/hero-sede.webp')"
+  >
+    <div class="container">
+      <p class="kicker">Nuestra ubicación</p><h1>Sede en Ipiales</h1><p>
+        Consulta el mapa y nuestros canales de atención antes de desplazarte.
+      </p>
+    </div>
+  </section><section class="section section-dark">
+    <div class="container location reveal">
+      <div>
+        <p class="kicker">Ipiales, Nariño</p><h2 class="display">
+          Encuéntranos en Ipiales
+        </h2><p class="lead">
+          Carrera 7 # 25-62, barrio Kennedy, Bomba Primax La Codi, Ipiales, Nariño.
+        </p><a class="btn primary" href={site.maps} target="_blank"
+          >Abrir Google Maps ↗</a>
+      </div><div class="map">
+        <iframe
+          title="Mapa de Ipiales"
+          src="https://www.google.com/maps?q=0.8288937,-77.6517826&z=18&output=embed"
+          loading="lazy"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section><style>
+    .location {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      align-items: center;
+      gap: 70px;
+    }
+    .location .btn {
+      margin-top: 30px;
+    }
+    @media (max-width: 850px) {
+      .location {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style></Base
+>

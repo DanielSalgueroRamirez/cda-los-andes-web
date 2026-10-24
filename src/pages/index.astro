@@ -6,100 +6,334 @@ import { site, wa } from "@/data/site";
 
 <Base
   title="CDA Los Andes | Revisión técnico-mecánica en Ipiales"
-  description="Revisión técnico-mecánica y de emisiones contaminantes en Ipiales."
-  ><section class="hero">
-    <img
-      src="/images/hero-inicio.webp"
-      alt="Centro de diagnóstico automotor"
-    /><div class="hero__shade"></div><div class="container hero__content">
-      <p class="hero__kicker">Centro de diagnóstico automotor · Ipiales</p><h1>
+  description="Revisión técnico-mecánica y de emisiones contaminantes para vehículos livianos en Ipiales."
+>
+  <section class="hero">
+    <img src="/images/hero-inicio.webp" alt="Centro de Diagnóstico Automotor" />
+    <div class="hero__shade"></div>
+    <div class="container hero__content">
+      <p class="hero__kicker">Centro de Diagnóstico Automotor · Ipiales</p>
+      <h1>
         Seguridad para tu vehículo,<br /><em>confianza</em> para tu camino
-      </h1><p>
+      </h1>
+      <p>
         Revisión técnico-mecánica y de emisiones con precisión, tecnología y
         atención responsable.
-      </p><div class="hero__actions">
-        <a class="btn primary" href={wa()} target="_blank"
-          >Agendar revisión <span>↗</span></a
-        ><a class="btn ghost" href="#servicios">Explorar servicios</a>
+      </p>
+      <div class="hero__actions">
+        <a
+          class="btn primary"
+          href={wa()}
+          target="_blank"
+          rel="noopener noreferrer"
+          >Agendar revisión <span aria-hidden="true">↗</span></a
+        >
+        <a class="btn ghost" href="#presentacion">Conocer CDA Los Andes</a>
       </div>
-    </div><a class="scroll" href="#servicios"
-      ><span>Descubre más</span><i></i></a>
-  </section><section class="statement section">
+    </div>
+    <a class="scroll" href="#presentacion"
+      ><span>Descubre más</span><i aria-hidden="true"></i></a
+    >
+  </section>
+
+  <section class="statement section">
     <div class="container reveal">
-      <p class="kicker">Nuestra filosofía</p><h2>
+      <p class="kicker">Nuestra filosofía</p>
+      <h2>
         Más que una revisión:<br />un compromiso con la <strong
-          >seguridad vial</strong>
+          >seguridad vial</strong
+        >
       </h2>
     </div>
-  </section><section class="section section-soft" id="servicios">
+  </section>
+
+  <section
+    id="presentacion"
+    class="about-cda section section-soft"
+    aria-labelledby="about-cda-title"
+  >
+    <div class="container reveal">
+      <p class="kicker">CDA Los Andes</p>
+      <h2 id="about-cda-title" class="display">
+        Revisión técnico-mecánica en Ipiales
+      </h2>
+      <div class="about-cda__content">
+        <p>
+          CDA Los Andes es el nuevo Centro de Diagnóstico Automotor de Ipiales,
+          diseñado única y exclusivamente para la revisión técnico-mecánica de
+          vehículos livianos: automóviles, camperos, camionetas y vehículos de
+          servicio público o particular de baja tonelada.
+        </p>
+        <p>
+          A diferencia de los centros mixtos, en CDA Los Andes entendemos que su
+          tiempo y la seguridad de su familia o negocio son lo más importante.
+        </p>
+        <p>
+          Al especializarnos exclusivamente en la línea liviana, evitamos las
+          largas filas ocasionadas por tractomulas y camiones, garantizando un
+          servicio ágil, cómodo y sin demoras.
+        </p>
+        <a class="about-cda__link" href="/servicios/"
+          >Conocer nuestros servicios <span aria-hidden="true">↗</span></a
+        >
+        <figure class="about-cda__photo reveal">
+          <img
+            src="/images/cda-fachada-presentacion.png"
+            alt="Fachada principal e instalaciones de CDA Los Andes en Ipiales"
+            loading="lazy"
+            width="1442"
+            height="1091"
+          />
+
+          <figcaption>
+            <span>Conozca nuestra sede</span>
+            <strong>Tecnología, seguridad y confianza</strong>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us section" aria-labelledby="why-us-title">
+    <div class="container">
+      <div class="split reveal">
+        <div>
+          <p class="kicker">Nuestro diferencial</p>
+          <h2 id="why-us-title" class="display">
+            ¿Por qué elegirnos como su aliado en la vía?
+          </h2>
+        </div>
+        <p class="lead">
+          Atención especializada para vehículos livianos, respaldada por
+          tecnología, personal calificado e instalaciones diseñadas para su
+          comodidad.
+        </p>
+      </div>
+
+      <div class="why-us__grid reveal">
+        <article>
+          <h3>Línea de inspección exclusiva</h3><p>
+            Al no atender vehículos pesados, optimizamos los tiempos de espera y
+            ofrecemos una revisión fluida, organizada y eficiente.
+          </p><span aria-hidden="true"></span>
+        </article>
+        <article>
+          <h3>Tecnología de punta</h3><p>
+            Contamos con equipos homologados y calibrados para verificar frenos,
+            suspensión, luces y emisiones contaminantes con precisión.
+          </p><span aria-hidden="true"></span>
+        </article>
+        <article>
+          <h3>Ubicación estratégica</h3><p>
+            Estamos en un punto de fácil acceso en Ipiales, conveniente para
+            residentes y vehículos que transitan por el corredor fronterizo.
+          </p><span aria-hidden="true"></span>
+        </article>
+        <article>
+          <h3>Talento humano calificado</h3><p>
+            Nuestro equipo técnico brinda una atención transparente e
+            información clara sobre el estado real de su vehículo.
+          </p><span aria-hidden="true"></span>
+        </article>
+        <article>
+          <h3>Instalaciones confortables</h3><p>
+            Mientras realizamos la inspección, podrá utilizar nuestra sala de
+            espera con Wi-Fi y zona de café.
+          </p><span aria-hidden="true"></span>
+        </article>
+      </div>
+
+      <div class="real-gallery-wrapper reveal">
+        <div class="real-gallery__heading">
+          <div>
+            <p class="kicker">Conozca nuestras instalaciones</p>
+            <h3>Espacios preparados para una atención eficiente</h3>
+          </div>
+          <p>
+            Una línea de inspección organizada, equipos especializados y
+            espacios amplios para atender vehículos livianos.
+          </p>
+        </div>
+
+        <div class="real-gallery">
+          <figure>
+            <img
+              src="/images/cda-fachada-real.jpeg"
+              alt="Fachada y área de ingreso de CDA Los Andes"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Fachada principal</span><strong
+                >Acceso amplio y organizado</strong
+              >
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/cda-linea-inspeccion-real.jpeg"
+              alt="Línea interior de inspección de CDA Los Andes"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Línea de inspección</span><strong
+                >Espacios para vehículos livianos</strong
+              >
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/cda-equipos-inspeccion-real.jpeg"
+              alt="Equipos técnicos de inspección de CDA Los Andes"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Equipamiento técnico</span><strong
+                >Tecnología para una revisión rigurosa</strong
+              >
+            </figcaption>
+          </figure>
+          <figure class="real-gallery__portrait">
+            <img
+              src="/images/cda-area-tecnica-real.jpeg"
+              alt="Área técnica interior de CDA Los Andes"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Área técnica</span><strong
+                >Orden y amplitud en cada espacio</strong
+              >
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="servicios">
     <div class="container">
       <div class="split reveal">
         <div>
           <p class="kicker">Servicios</p><h2 class="display">
             Precisión técnica en cada inspección
           </h2>
-        </div><p class="lead">
-          Procesos diseñados para verificar las condiciones de seguridad y
-          emisiones de tu vehículo con claridad y eficiencia.
+        </div>
+        <p class="lead">
+          Procesos diseñados para verificar las condiciones de seguridad y las
+          emisiones de los vehículos livianos con claridad y eficiencia.
         </p>
-      </div><ServiceGrid />
+      </div>
+      <ServiceGrid />
     </div>
-  </section><section class="feature section-dark">
+  </section>
+
+  <section class="feature section-dark">
     <img
       src="/images/hero-servicios.webp"
       alt="Línea de inspección vehicular"
-    /><div class="feature__shade"></div><div
-      class="container feature__content reveal"
-    >
-      <p class="kicker">Proceso confiable</p><h2 class="display">
-        Tecnología al servicio de tu seguridad
-      </h2><p class="lead">
+    />
+    <div class="feature__shade"></div>
+    <div class="container feature__content reveal">
+      <p class="kicker">Proceso confiable</p>
+      <h2 class="display">Tecnología al servicio de tu seguridad</h2>
+      <p class="lead">
         Equipos modernos, proceso técnico y atención orientada a que tengas
         información clara antes, durante y después de tu revisión.
-      </p><a class="btn ghost" href="/servicios/">Conoce el proceso ↗</a>
+      </p>
+      <a class="btn ghost" href="/servicios/"
+        >Conocer el proceso <span aria-hidden="true">↗</span></a
+      >
     </div>
-  </section><section class="section section-soft">
-    <div class="container">
-      <div class="split reveal">
-        <div>
-          <p class="kicker">Tarifas</p><h2 class="display">
-            Información clara, sin sorpresas
-          </h2>
-        </div><a class="text-link" href="/tarifas/"
-          >Consultar todas las tarifas ↗</a>
-      </div><div class="price-grid reveal">
-        <article>
-          <span>Motocicletas</span><strong>$220.000</strong><small
-            >Valor provisional</small>
-        </article><article>
-          <span>Vehículos livianos</span><strong>$320.000</strong><small
-            >Valor provisional</small>
-        </article><article>
-          <span>Vehículos eléctricos</span><strong>$240.000</strong><small
-            >Valor provisional</small>
-        </article>
+  </section>
+
+  <section class="mission section" aria-labelledby="mission-title">
+    <div class="container mission__grid reveal">
+      <div class="mission__content">
+        <p class="kicker">Nuestra misión</p>
+        <h2 id="mission-title" class="display">
+          Rigor técnico para que su vehículo ruede seguro
+        </h2>
+        <p class="lead">
+          Nuestra misión es realizar la Revisión Técnico-Mecánica y de Emisiones
+          Contaminantes con la mayor rigurosidad legal y técnica, brindándole la
+          tranquilidad de conocer el estado real de su vehículo y verificar su
+          cumplimiento con la normatividad de tránsito vigente.
+        </p>
+        <a class="text-link" href="/servicios/"
+          >Conocer el proceso de inspección <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <div class="mission__image">
+        <img
+          src="/images/cda-equipos-inspeccion-real.jpeg"
+          alt="Equipos de diagnóstico e inspección de CDA Los Andes"
+          loading="lazy"
+        />
       </div>
     </div>
-  </section><section class="section section-dark">
+  </section>
+
+  <section class="fleet section" aria-labelledby="fleet-title">
+    <div class="container fleet__grid reveal">
+      <div class="fleet__image">
+        <img
+          src="/images/cda-linea-inspeccion-real.jpeg"
+          alt="Línea real de inspección de CDA Los Andes"
+          loading="lazy"
+        />
+      </div>
+      <div class="fleet__content">
+        <p class="kicker">Empresas y flotillas</p>
+        <h2 id="fleet-title" class="display">
+          Convenios con atención preferencial
+        </h2>
+        <p class="lead">
+          Estamos listos para atender vehículos particulares y gestionar
+          convenios especiales para la flotilla de su empresa, con atención
+          preferencial y beneficios de acuerdo con las necesidades de su
+          operación.
+        </p>
+        <a
+          class="btn primary"
+          href={wa(
+            "Hola, quiero información sobre convenios para la flotilla de mi empresa.",
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          >Consultar convenio <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
     <div class="container location reveal">
       <div>
-        <p class="kicker">Ubicación</p><h2 class="display">
-          Estamos en Ipiales
-        </h2><p class="lead">
-          El mapa está centrado temporalmente en la ciudad. La dirección
-          definitiva se actualizará cuando sea confirmada.
-        </p><a class="btn primary" href={site.maps} target="_blank"
-          >Abrir Google Maps ↗</a>
-      </div><div class="map">
+        <p class="kicker">Ubicación</p>
+        <h2 class="display">Estamos en Ipiales</h2>
+        <p class="lead">
+          Carrera 7 # 25-62, barrio Kennedy, Bomba Primax La Codi, Ipiales,
+          Nariño.
+        </p>
+        <a
+          class="btn primary"
+          href={site.maps}
+          target="_blank"
+          rel="noopener noreferrer"
+          >Abrir Google Maps <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <div class="map">
         <iframe
-          title="Mapa de Ipiales"
-          src="https://www.google.com/maps?q=Ipiales%2C%20Nari%C3%B1o%2C%20Colombia&z=14&output=embed"
+          title="Mapa de CDA Los Andes en Ipiales"
+          src="https://www.google.com/maps?q=0.8288937%2C-77.6517826&z=18&output=embed"
           loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
           allowfullscreen></iframe>
       </div>
     </div>
-  </section></Base
->
+  </section>
+</Base>
+
 <style>
   .hero {
     position: relative;
@@ -135,6 +369,7 @@ import { site, wa } from "@/data/site";
     padding: 80px 0 120px;
   }
   .hero__kicker {
+    margin: 0;
     font-family: var(--display);
     font-weight: 700;
     letter-spacing: 0.15em;
@@ -184,6 +419,7 @@ import { site, wa } from "@/data/site";
     height: 1px;
     background: #fff;
   }
+
   .statement {
     background: #fff;
   }
@@ -201,9 +437,116 @@ import { site, wa } from "@/data/site";
     color: var(--green);
     font-weight: 600;
   }
+
+  .about-cda {
+    border-top: 1px solid var(--line);
+  }
+  .about-cda .display {
+    max-width: 1000px;
+  }
+  .about-cda__content {
+    max-width: 100%;
+    margin-top: 28px;
+  }
+  .about-cda__content > p {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 1.03rem;
+    line-height: 1.8;
+  }
+  .about-cda__content > p:first-child {
+    color: var(--ink);
+  }
+  .about-cda__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid var(--green);
+    color: var(--navy);
+    font-family: var(--display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition:
+      gap 0.25s ease,
+      color 0.25s ease;
+  }
+  .about-cda__link:hover {
+    gap: 17px;
+    color: var(--green);
+  }
+
+  .about-cda__photo {
+    position: relative;
+    margin: 48px 0 0;
+    overflow: hidden;
+    border: 1px solid rgba(3, 21, 45, 0.12);
+    background: var(--navy);
+    box-shadow: 0 24px 65px rgba(3, 21, 45, 0.12);
+  }
+
+  .about-cda__photo img {
+    display: block;
+    width: 100%;
+    height: clamp(390px, 48vw, 650px);
+    object-fit: cover;
+    object-position: center 48%;
+    transition:
+      transform 0.6s ease,
+      filter 0.6s ease;
+  }
+
+  .about-cda__photo:hover img {
+    filter: brightness(0.94);
+    transform: scale(1.015);
+  }
+
+  .about-cda__photo figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 110px 38px 32px;
+    color: #ffffff;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(3, 21, 45, 0.18) 25%,
+      rgba(3, 21, 45, 0.94) 100%
+    );
+  }
+
+  .about-cda__photo figcaption span,
+  .about-cda__photo figcaption strong {
+    display: block;
+  }
+
+  .about-cda__photo figcaption span {
+    margin-bottom: 7px;
+    color: var(--green2);
+    font-family: var(--display);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .about-cda__photo figcaption strong {
+    max-width: 760px;
+    font-family: var(--display);
+    font-size: clamp(1.65rem, 3vw, 2.7rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
   .split {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 50px;
     margin-bottom: 48px;
@@ -211,11 +554,180 @@ import { site, wa } from "@/data/site";
   .split .lead {
     max-width: 470px;
   }
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--green);
+    font-family: var(--display);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .why-us {
+    background: #fff;
+  }
+  .why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    background: var(--line);
+  }
+  .why-us__grid article {
+    position: relative;
+    min-height: 310px;
+    padding: 34px;
+    background: #fff;
+    transition:
+      background 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+  }
+  .why-us__grid article:nth-child(1),
+  .why-us__grid article:nth-child(2),
+  .why-us__grid article:nth-child(3) {
+    grid-column: span 2;
+  }
+  .why-us__grid article:nth-child(4),
+  .why-us__grid article:nth-child(5) {
+    grid-column: span 3;
+  }
+  .why-us__grid article:hover {
+    z-index: 1;
+    background: #fbfdfb;
+    box-shadow: 0 25px 70px rgba(3, 21, 45, 0.14);
+    transform: translateY(-7px);
+  }
+  .why-us__grid h3 {
+    max-width: 330px;
+    margin: 0 0 20px;
+    color: var(--navy);
+    font-family: var(--display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .why-us__grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+  }
+  .why-us__grid article > span {
+    position: absolute;
+    right: 28px;
+    bottom: 24px;
+    font-size: 1.25rem;
+    transition: transform 0.25s ease;
+  }
+  .why-us__grid article:hover > span {
+    transform: translate(5px, -5px);
+  }
+
+  /* Galería ampliada, uniforme y de cuatro imágenes */
+  .real-gallery-wrapper {
+    width: 100%;
+    max-width: none;
+    margin: 72px auto 0;
+    padding: 40px;
+    border: 1px solid var(--line);
+    background: #f8fafb;
+    box-shadow: 0 24px 65px rgba(3, 21, 45, 0.08);
+  }
+  .real-gallery__heading {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 50px;
+    align-items: end;
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .real-gallery__heading .kicker {
+    margin-bottom: 8px;
+  }
+  .real-gallery__heading h3 {
+    max-width: 680px;
+    margin: 0;
+    color: var(--navy);
+    font-family: var(--display);
+    font-size: clamp(2rem, 3.1vw, 3.1rem);
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .real-gallery__heading > p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+  .real-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .real-gallery figure {
+    position: relative;
+    min-width: 0;
+    height: 320px;
+    margin: 0;
+    overflow: hidden;
+    background: var(--navy);
+  }
+  .real-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition:
+      transform 0.55s ease,
+      filter 0.55s ease;
+  }
+  .real-gallery__portrait img {
+    object-position: center 38%;
+  }
+  .real-gallery figure:hover img {
+    filter: brightness(0.92);
+    transform: scale(1.035);
+  }
+  .real-gallery figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 60px 24px 20px;
+    color: #fff;
+    background: linear-gradient(180deg, transparent, rgba(3, 21, 45, 0.9));
+  }
+  .real-gallery figcaption span,
+  .real-gallery figcaption strong {
+    display: block;
+  }
+  .real-gallery figcaption span {
+    color: var(--green2);
+    font-family: var(--display);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+  .real-gallery figcaption strong {
+    margin-top: 4px;
+    font-family: var(--display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
   .feature {
     position: relative;
     isolation: isolate;
-    min-height: 720px;
     display: grid;
+    min-height: 720px;
     align-items: end;
     overflow: hidden;
   }
@@ -243,48 +755,83 @@ import { site, wa } from "@/data/site";
   .feature .lead {
     margin-bottom: 30px;
   }
-  .text-link {
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--green);
-    font-family: var(--display);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+
+  .mission {
+    background: #fff;
   }
-  .price-grid {
+  .mission__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    grid-template-columns: 1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
   }
-  .price-grid article {
-    padding: 34px;
-    border-right: 1px solid var(--line);
+  .mission__content .lead {
+    max-width: 660px;
+    margin-bottom: 30px;
   }
-  .price-grid article:last-child {
-    border: 0;
+  .mission__image {
+    max-width: 560px;
+    height: 390px;
+    overflow: hidden;
+    justify-self: end;
+    box-shadow: 0 24px 65px rgba(3, 21, 45, 0.12);
   }
-  .price-grid span,
-  .price-grid small {
-    display: block;
-    color: var(--muted);
+  .mission__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-  .price-grid strong {
-    display: block;
-    margin: 28px 0 8px;
-    color: var(--navy);
-    font-family: var(--display);
-    font-size: 3.2rem;
+
+  .fleet {
+    background: #fff;
   }
+  .fleet__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 70px;
+    align-items: center;
+  }
+  .fleet__image {
+    max-width: 570px;
+    height: 390px;
+    overflow: hidden;
+    box-shadow: 0 24px 65px rgba(3, 21, 45, 0.12);
+  }
+  .fleet__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .fleet__content .lead {
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
   .location {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 0.75fr 1.25fr;
     align-items: center;
     gap: 70px;
   }
   .location .btn {
     margin-top: 30px;
   }
+  .location .map {
+    position: relative;
+    min-height: 480px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #fff;
+    box-shadow: 0 25px 75px rgba(0, 0, 0, 0.22);
+  }
+  .location .map iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
   @keyframes zoom {
     from {
       transform: scale(1.05);
@@ -293,26 +840,83 @@ import { site, wa } from "@/data/site";
       transform: scale(1);
     }
   }
+
+  @media (max-width: 1000px) {
+    .why-us__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .why-us__grid article:nth-child(n) {
+      grid-column: auto;
+    }
+    .real-gallery-wrapper {
+      padding: 26px;
+    }
+    .real-gallery__heading {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .real-gallery figure {
+      height: 290px;
+    }
+    .mission__grid,
+    .fleet__grid {
+      grid-template-columns: 1fr;
+    }
+    .mission__image,
+    .fleet__image {
+      width: 100%;
+      max-width: none;
+      height: 420px;
+      justify-self: stretch;
+    }
+  }
+
   @media (max-width: 900px) {
     .hero {
       min-height: 680px;
     }
     .split,
     .location {
-      grid-template-columns: 1fr;
       display: grid;
-    }
-    .price-grid {
       grid-template-columns: 1fr;
-    }
-    .price-grid article {
-      border-right: 0;
-      border-bottom: 1px solid var(--line);
     }
     .feature {
       min-height: 600px;
     }
+    .location .map {
+      min-height: 420px;
+    }
   }
+
+  @media (max-width: 650px) {
+    .why-us__grid,
+    .real-gallery {
+      grid-template-columns: 1fr;
+    }
+    .why-us__grid article {
+      min-height: 260px;
+    }
+    .real-gallery figure {
+      height: 270px;
+    }
+    .real-gallery-wrapper {
+      margin-top: 50px;
+      padding: 18px;
+    }
+    .real-gallery__heading {
+      margin-bottom: 28px;
+    }
+    .real-gallery__heading h3 {
+      font-size: 2rem;
+    }
+    .real-gallery figcaption {
+      padding: 55px 20px 18px;
+    }
+    .real-gallery figcaption strong {
+      font-size: 1.2rem;
+    }
+  }
+
   @media (max-width: 560px) {
     .hero__actions {
       flex-direction: column;
@@ -322,6 +926,23 @@ import { site, wa } from "@/data/site";
     }
     .hero h1 {
       font-size: 3.35rem;
+    }
+    .about-cda__content > p {
+      font-size: 1rem;
+    }
+    .mission__image,
+    .fleet__image {
+      height: 310px;
+    }
+    .location .map {
+      min-height: 360px;
+    }
+    .about-cda__photo {
+      margin-top: 36px;
+    }
+
+    .about-cda__photo img {
+      height: 280px;
     }
   }
 </style>

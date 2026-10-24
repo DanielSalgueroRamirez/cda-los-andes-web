@@ -1,4 +1,264 @@
 ---
-import Base from '@/layouts/Base.astro';import {site,wa} from '@/data/site';
+import Base from "@/layouts/Base.astro";
+import { site, wa } from "@/data/site";
 ---
-<Base title="Contacto | CDA Los Andes" description="Contacta a CDA Los Andes en Ipiales."><section class="pageHero" style="background-image:url('/images/hero-contacto.webp')"><div class="container"><p class="kicker">Hablemos</p><h1>Estamos aquí para orientarte</h1><p>Elige el canal que prefieras para solicitar información.</p></div></section><section class="section section-dark"><div class="container contact reveal"><a href={`tel:${site.phoneHref}`}><span>01</span><small>Teléfono</small><strong>{site.phone}</strong><b>↗</b></a><a href={wa()} target="_blank"><span>02</span><small>WhatsApp</small><strong>Solicitar información</strong><b>↗</b></a><a href={`mailto:${site.email}`}><span>03</span><small>Correo</small><strong>{site.email}</strong><b>↗</b></a></div></section><style>.contact{border-top:1px solid #ffffff25}.contact a{display:grid;grid-template-columns:70px .5fr 1fr 30px;align-items:center;padding:34px 0;border-bottom:1px solid #ffffff25}.contact span{color:var(--green);font-family:var(--display)}.contact small{text-transform:uppercase}.contact strong{font-family:var(--display);font-size:2rem;text-transform:uppercase}.contact b{font-size:1.4rem}@media(max-width:700px){.contact a{grid-template-columns:40px 1fr}.contact strong{grid-column:2;font-size:1.45rem}.contact b{display:none}}</style></Base>
+
+<Base
+  title="Contacto | CDA Los Andes"
+  description="Contacta a CDA Los Andes en Ipiales por teléfono, WhatsApp, correo electrónico o redes sociales."
+>
+  <section
+    class="pageHero"
+    style="background-image: url('/images/hero-contacto.webp')"
+  >
+    <div class="container">
+      <p class="kicker">Hablemos</p>
+
+      <h1>Estamos aquí para orientarte</h1>
+
+      <p>
+        Elige el canal que prefieras para solicitar información.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container contact reveal">
+      <!-- Teléfono visible en escritorio, sin redirección -->
+      <div class="contact__row contact__phone--desktop">
+        <span>01</span>
+        <small>Teléfono</small>
+        <strong>{site.phone}</strong>
+        <b aria-hidden="true"></b>
+      </div>
+
+      <!-- Teléfono visible en celular, con función para llamar -->
+      <a
+        class="contact__row contact__phone--mobile"
+        href={`tel:${site.phoneHref}`}
+        aria-label={`Llamar a CDA Los Andes al ${site.phone}`}
+      >
+        <span>01</span>
+        <small>Teléfono</small>
+        <strong>{site.phone}</strong>
+        <b aria-hidden="true">↗</b>
+      </a>
+
+      <a
+        class="contact__row"
+        href={wa()}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Solicitar información a CDA Los Andes por WhatsApp"
+      >
+        <span>02</span>
+        <small>WhatsApp</small>
+        <strong>Solicitar información</strong>
+        <b aria-hidden="true">↗</b>
+      </a>
+
+      <a
+        class="contact__row"
+        href={`mailto:${site.email}`}
+        aria-label={`Enviar un correo electrónico a ${site.email}`}
+      >
+        <span>03</span>
+        <small>Correo</small>
+        <strong>{site.email}</strong>
+        <b aria-hidden="true">↗</b>
+      </a>
+
+      <div class="social-heading">
+        <p class="kicker">Redes sociales</p>
+
+        <h2>Síguenos y conoce nuestras novedades</h2>
+
+        <p>
+          Encuentra información, contenido de nuestras instalaciones y
+          novedades de CDA Los Andes.
+        </p>
+      </div>
+
+      <a
+        class="contact__row"
+        href={site.instagram.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visitar Instagram de CDA Los Andes: ${site.instagram.name}`}
+      >
+        <span>IG</span>
+        <small>Instagram</small>
+        <strong>{site.instagram.name}</strong>
+        <b aria-hidden="true">↗</b>
+      </a>
+
+      <a
+        class="contact__row"
+        href={site.facebook.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visitar Facebook de ${site.facebook.name}`}
+      >
+        <span>FB</span>
+        <small>Facebook</small>
+        <strong>{site.facebook.name}</strong>
+        <b aria-hidden="true">↗</b>
+      </a>
+
+      <a
+        class="contact__row"
+        href={site.tiktok.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visitar TikTok de CDA Los Andes: ${site.tiktok.name}`}
+      >
+        <span>TT</span>
+        <small>TikTok</small>
+        <strong>{site.tiktok.name}</strong>
+        <b aria-hidden="true">↗</b>
+      </a>
+    </div>
+  </section>
+
+  <style>
+    .contact {
+      border-top: 1px solid #ffffff25;
+    }
+
+    .contact__row {
+      display: grid;
+      grid-template-columns: 70px 0.5fr 1fr 30px;
+      align-items: center;
+      padding: 34px 0;
+      border-bottom: 1px solid #ffffff25;
+    }
+
+    .contact a.contact__row {
+      transition:
+        padding-left 0.25s ease,
+        background-color 0.25s ease;
+    }
+
+    .contact a.contact__row:hover {
+      padding-left: 12px;
+      background-color: rgba(255, 255, 255, 0.025);
+    }
+
+    /*
+     * La versión móvil debe permanecer oculta en escritorio.
+     * Este selector tiene suficiente prioridad para no ser sobrescrito
+     * por la regla general de .contact__row.
+     */
+    .contact .contact__phone--mobile {
+      display: none;
+    }
+
+    .contact__row > span {
+      color: var(--green);
+      font-family: var(--display);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .contact__row > small {
+      color: #b8c8d8;
+      text-transform: uppercase;
+    }
+
+    .contact__row > strong {
+      color: #ffffff;
+      font-family: var(--display);
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .contact__row > b {
+      color: #ffffff;
+      font-size: 1.4rem;
+      transition: transform 0.25s ease;
+    }
+
+    .contact a.contact__row:hover > b {
+      transform: translate(4px, -4px);
+    }
+
+    .social-heading {
+      display: grid;
+      grid-template-columns: 0.65fr 1fr;
+      gap: 20px 60px;
+      align-items: end;
+      margin-top: 72px;
+      padding: 50px 0 34px;
+      border-bottom: 1px solid #ffffff25;
+    }
+
+    .social-heading .kicker {
+      grid-column: 1 / -1;
+      margin: 0;
+    }
+
+    .social-heading h2 {
+      max-width: 620px;
+      margin: 0;
+      color: #ffffff;
+      font-family: var(--display);
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .social-heading > p:last-child {
+      max-width: 500px;
+      margin: 0;
+      color: #b8c8d8;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      /*
+       * En celular se oculta el bloque sin enlace y aparece
+       * la versión que permite iniciar una llamada.
+       */
+      .contact .contact__phone--desktop {
+        display: none;
+      }
+
+      .contact .contact__phone--mobile {
+        display: grid;
+      }
+
+      .contact__row {
+        grid-template-columns: 40px 1fr;
+        gap: 4px 14px;
+      }
+
+      .contact__row > strong {
+        grid-column: 2;
+        font-size: 1.45rem;
+        overflow-wrap: anywhere;
+      }
+
+      .contact__row > b {
+        display: none;
+      }
+
+      .social-heading {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 50px;
+        padding-top: 35px;
+      }
+
+      .social-heading .kicker {
+        grid-column: auto;
+      }
+
+      .social-heading h2 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</Base>

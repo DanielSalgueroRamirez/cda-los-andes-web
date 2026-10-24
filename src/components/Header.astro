@@ -4,7 +4,6 @@ const path = Astro.url.pathname;
 const links = [
   ["/", "Inicio"],
   ["/servicios/", "Servicios"],
-  ["/tarifas/", "Tarifas"],
   ["/sedes/", "Sede"],
   ["/preguntas-frecuentes/", "Preguntas"],
   ["/contacto/", "Contacto"],
@@ -13,8 +12,15 @@ const links = [
 
 <div class="top">
   <div class="container top__inner">
-    <span>📍 {site.city}</span><span>🕒 Horarios sujetos a confirmación</span><a
-      href={`tel:${site.phoneHref}`}>☎ {site.phone}</a>
+    <span>📍 {site.city}</span><span>🕒 Horarios sujetos a confirmación</span>
+    <span class="phone-desktop">☎ {site.phone}</span>
+    <a
+      class="phone-mobile"
+      href={`tel:${site.phoneHref}`}
+      aria-label={`Llamar al ${site.phone}`}
+    >
+      ☎ {site.phone}
+    </a>
   </div>
 </div>
 <header>
@@ -47,7 +53,8 @@ const links = [
         class="btn primary nav-cta"
         href={wa()}
         target="_blank"
-        rel="noopener noreferrer">Agendar revisión</a>
+        rel="noopener noreferrer">Agendar revisión</a
+      >
     </nav>
   </div>
 </header>
@@ -201,17 +208,33 @@ const links = [
       justify-content: space-between;
       font-size: 0.67rem;
     }
-    .top__inner span:nth-child(2),
-    .top__inner a {
+    .top__inner span:nth-child(2) {
       display: none;
     }
     .head {
       min-height: 98px;
     }
     .brand {
-      width: 285px;
+      width: min(230px, calc(100vw - 105px));
       height: 84px;
-      flex-basis: 285px;
+      flex-basis: min(230px, calc(100vw - 105px));
+    }
+  }
+  .phone-desktop {
+    display: inline;
+  }
+
+  .phone-mobile {
+    display: none;
+  }
+
+  @media (max-width: 980px) {
+    .phone-desktop {
+      display: none;
+    }
+
+    .phone-mobile {
+      display: inline;
     }
   }
 </style>
