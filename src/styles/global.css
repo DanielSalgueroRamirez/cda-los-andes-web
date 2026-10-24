@@ -15,7 +15,7 @@
   --body: "Manrope", "Segoe UI", sans-serif;
 }
 
-/* MODELO DE CAJA Y CONTROL DE DESBORDAMIENTO */
+/* MODELO DE CAJA */
 
 *,
 *::before,
@@ -23,9 +23,13 @@
   box-sizing: border-box;
 }
 
+/* DOCUMENTO */
+
 html {
   width: 100%;
+  min-width: 0;
   max-width: 100%;
+  margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
@@ -33,6 +37,7 @@ html {
 
 body {
   width: 100%;
+  min-width: 0;
   max-width: 100%;
   margin: 0;
   overflow-x: hidden;
@@ -41,6 +46,25 @@ body {
   font-family: var(--body);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body > header,
+body > main,
+body > footer {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+main,
+header,
+footer,
+section,
+nav,
+div,
+figure {
+  min-width: 0;
 }
 
 /* ELEMENTOS GENERALES */
@@ -52,21 +76,37 @@ a {
 
 img,
 iframe,
-video {
+video,
+svg {
   max-width: 100%;
 }
 
 img {
   display: block;
+  height: auto;
 }
 
 iframe {
+  display: block;
   border: 0;
 }
 
-button {
+button,
+input,
+textarea,
+select {
   font: inherit;
 }
+
+button {
+  color: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
 
 .container {
   width: min(calc(100% - 48px), var(--container));
@@ -78,6 +118,7 @@ button {
 /* SECCIONES */
 
 .section {
+  width: 100%;
   padding: 112px 0;
 }
 
@@ -90,7 +131,7 @@ button {
   background: var(--soft);
 }
 
-/* ETIQUETAS PEQUEÑAS */
+/* ETIQUETAS SUPERIORES */
 
 .kicker {
   display: flex;
@@ -102,6 +143,7 @@ button {
   font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.13em;
+  overflow-wrap: break-word;
   text-transform: uppercase;
 }
 
@@ -162,6 +204,7 @@ button {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.06em;
+  line-height: 1.2;
   text-align: center;
   overflow-wrap: break-word;
   text-transform: uppercase;
@@ -197,12 +240,13 @@ button {
   background: #ffffff;
 }
 
-/* CUADRÍCULA DE TARJETAS */
+/* TARJETAS */
 
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
+  width: 100%;
   min-width: 0;
   background: var(--line);
 }
@@ -263,12 +307,14 @@ button {
   transform: translate(5px, -5px);
 }
 
-/* ENCABEZADOS DE PÁGINAS INTERNAS */
+/* HERO DE PÁGINAS INTERNAS */
 
 .pageHero {
   position: relative;
   isolation: isolate;
   display: grid;
+  width: 100%;
+  min-width: 0;
   min-height: 500px;
   align-items: end;
   padding: 90px 0;
@@ -325,7 +371,6 @@ button {
 .map iframe {
   position: absolute;
   inset: 0;
-  display: block;
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -347,7 +392,7 @@ button {
   transform: none;
 }
 
-/* ACCESIBILIDAD */
+/* MOVIMIENTO REDUCIDO */
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -369,7 +414,7 @@ button {
   }
 }
 
-/* TABLETAS Y PANTALLAS MEDIANAS */
+/* TABLETAS */
 
 @media (max-width: 900px) {
   .section {
@@ -401,10 +446,21 @@ button {
     scroll-padding-top: 110px;
   }
 
+  body,
+  main,
+  header,
+  footer,
+  section {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .container {
     width: calc(100% - 28px);
     max-width: 100%;
     min-width: 0;
+    margin-inline: auto;
   }
 
   .section {
